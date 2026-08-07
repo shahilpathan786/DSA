@@ -1,9 +1,6 @@
-// 1.stack using array
-// 2.queue using array
-// 3.circular queue using array
-
 #include <iostream>
 using namespace std;
+
 
 
 class Stack {
@@ -54,6 +51,7 @@ public:
         cout << endl;
     }
 };
+
 
 
 class Queue {
@@ -108,6 +106,7 @@ public:
         cout << endl;
     }
 };
+
 
 
 class CircularQueue {
@@ -207,7 +206,7 @@ int main() {
 
     while (true) {
 
-        cout << "\n========= MAIN MENU =========\n";
+        cout << "\nMAIN MENU\n";
         cout << "1. Stack\n";
         cout << "2. Queue\n";
         cout << "3. Circular Queue\n";
@@ -225,7 +224,7 @@ int main() {
         case 1:
 
             do {
-                cout << "\n--- STACK MENU ---\n";
+                cout << "\nSTACK MENU \n";
                 cout << "1.Push\n2.Pop\n3.Peek\n4.Display\n5.Back\n";
                 cin >> op;
 
@@ -259,7 +258,7 @@ int main() {
 
             do {
 
-                cout << "\n--- QUEUE MENU ---\n";
+                cout << "\n QUEUE MENU\n";
                 cout << "1.Enqueue\n2.Dequeue\n3.Peek\n4.Display\n5.Back\n";
                 cin >> op;
 
@@ -293,7 +292,7 @@ int main() {
 
             do {
 
-                cout << "\n--- CIRCULAR QUEUE MENU ---\n";
+                cout << "\n CIRCULAR QUEUE MENU\n";
                 cout << "1.Enqueue\n2.Dequeue\n3.Peek\n4.Display\n5.Back\n";
                 cin >> op;
 
