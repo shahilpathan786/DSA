@@ -33,47 +33,94 @@ Node* buildTree(vector<int> preorder){
 }
 
 // preOreder
-void preOrder(Node* root){
-    if(root == NULL){
-        return;
-    }
+// void preOrder(Node* root){
+//     if(root == NULL){
+//         return;
+//     }
 
-    cout << root->data << "";
-    preOrder(root->left);
-    preOrder(root->right);
-}
+//     cout << root->data << "";
+//     preOrder(root->left);
+//     preOrder(root->right);
+// }
 
 // inorder 
 
-void inorder(Node* root){
-    if(root == NULL){
-        return;
-    }
+// void inorder(Node* root){
+//     if(root == NULL){
+//         return;
+//     }
 
-    inorder(root->left);
-    cout<< root->data << " ";
-    inorder(root->right);
-}
+//     inorder(root->left);
+//     cout<< root->data << " ";
+//     inorder(root->right);
+// }
 
 // postOrder
-void postOrder(Node* root){
+// void postOrder(Node* root){
+//     if(root == NULL){
+//         return;
+//     }
+//     postOrder(root->left);
+//     postOrder(root->right);
+//     cout << root->data << " "; 
+// }
+
+// int depth(Node* root){
+//     if(root == NULL){
+//         return -1;
+
+//     }
+
+//     int leftdep = depth(root->left);
+//     int rightdep = depth(root->right);
+
+//     return max(leftdep , rightdep) + 1;
+// }
+
+// int diameterofnode(Node* root){
+//     if(root == NULL){
+//         return 0;
+//     }
+
+//     int diameterleft = diameterofnode(root->left);
+//     int diameterright = diameterofnode(root->right);
+//     int add = depth(root->left) + depth(root->right);
+
+//     return max(diameterleft , diameterright , add);
+// }
+
+// second way od doing diameter probelm
+
+int ans = 0;
+
+int diameter(Node* root){
     if(root == NULL){
-        return;
+        return 0;
     }
-    postOrder(root->left);
-    postOrder(root->right);
-    cout << root->data << " "; 
+    int lefth = diameter(root->left);
+    int righth = diameter(root ->right);
+    ans = max(ans , lefth + righth);
+
+    return max(lefth , righth) + 1;
+
+
 }
+
+int duamee(Node* root){
+    diameter(root);
+
+    return ans;
+}
+
+// this is the end of the diameter question;
+
+
 
 
 int main(){
     vector <int> preorder = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};
 
     Node* root = buildTree(preorder);
-    cout << root->data << endl;
-    cout << root->left->data << endl;
-    cout << root->right->data << endl;
-    preOrder(root);
-    inorder(root);
+    cout<<duamee(root) << endl;
     return 0;
 }

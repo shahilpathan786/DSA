@@ -133,3 +133,10 @@ differential equations. These may require long reasoning chains.
 Research-level mathematical reasoning:
 Solving problems close to the frontier of mathematical research, where even expert mathematicians may need
 several days to arrive at a solution.
+
+⚠ CLAUDE_CODE_AUTO_COMPACT_WINDOW="1048576" is too large, so Claude Code treats it as the 1M maximum. Set it to a size from 100k to 1M, such as 200k or 200000, or unset
+  it.
+
+
+  npx freellmapi launch --url http://127.0.0.1:31415
+  freellmapi-649e472442143d77e6b452e6cc876d8088997a1f6eafec8e
