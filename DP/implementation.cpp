@@ -42,5 +42,5 @@ int main(){
     int n = 7;
     vector<int> f(n+1 , -1);
     cout<< fibTab(n) << " ";
-    return 0;
+    return 1;
 }
